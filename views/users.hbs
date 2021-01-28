@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <style>
+          body { margin: 20; background: #222; color: #fafafa; font-family: 'Arial Nova', sans-serif; }
+        form{position: fixed;top: 16%;left: 40%;height: 50%;width: 20%;}
+        button { margin-left: 33%; background-color: #7ab429; border: #fafafa;border-radius: 20%;color: #fafafa; height: 13%;width: 34%; text-align: center;text-decoration-color: #fafafa;display: inline-block;font-size: 1.2vw;}
+        input{width: 100%; margin-bottom: 1%; height: 8%;}
+        label{font-size: 1.2vw;}
+      </style>
+    <meta charset="utf-8" />
+    <title>Users</title>
+  </head>
+  <body>
+     <form action="/users" method= "POST">
+  <div>
+  <label for="FirstName">First name:</label><br>
+  <input type="text" name="FirstName" placeholder="John" required=''><br>
+  <div>
+  <label for="lastname">Last name:</label><br>
+  <input type="text" name="Lastname" placeholder="Kovalsky" required=''><br>
+  <div>
+  <label for="Date">Date of birth:</label><br>
+  <input type="date" name="DateOfBirth" required=''><br>
+  <div>
+  <label for="login">Login:</label><br>
+  <input type="text" name="Login" required=''><br>
+  <div>
+  <label for="lname">Password:</label><br>
+  <input type="password" name="Pass" required=''><br>
+  <div>
+  <button>Add User</button>
+</form> 
+  </body>
+</html>
