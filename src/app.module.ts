@@ -8,6 +8,8 @@ import {users} from './users/users.entity';
 import { UserListController } from './user-list/user-list.controller';
 import { UserListService } from './user-list/user-list.service';
 import { UserListModule } from './user-list/user-list.module';
+import { UsersController } from './users/users.controller';
+import { UsersService } from './users/users.service';
 
 
 
@@ -23,8 +25,8 @@ import { UserListModule } from './user-list/user-list.module';
       synchronize: true,
     }),UsersModule, UserListModule
   ], 
-  controllers: [AppController, UserListController],
-  providers: [AppService, UserListService],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {
   constructor(private connection: Connection) {}

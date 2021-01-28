@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Render, Body} from '@nestjs/common';
+import { Controller, Get, Post, Render, Body, Res, Redirect} from '@nestjs/common';
 import { UsersService } from './users.service';
 
 
@@ -12,7 +12,10 @@ export class UsersController {
         return { };
   }
   @Post() 
+  @Redirect('/')
   create(@Body() body){
     this.usersService.createuser(body);
+    
     }
+  
 }

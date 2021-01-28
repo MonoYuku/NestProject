@@ -3,13 +3,38 @@
   <head>
       <style>
         body { margin: 20; background: #222; color: #fafafa; font-family: 'Arial Nova', sans-serif; }
-        button { margin-left: 33%; background-color: #7ab429; border: #fafafa;border-radius: 20%;color: #fafafa; height: 13%;width: 34%; text-align: center;text-decoration-color: #fafafa;display: inline-block;font-size: 1.2vw;}
+        button { margin: auto; background-color: #7ab429; border: #fafafa;border-radius: 20%;color: #fafafa; width: 90%;height: 90%; text-align: center;text-decoration-color: #fafafa;display: inline-block;font-size: 0.8vw;}
         input{width: 100%; margin-bottom: 1%; height: 8%;}
-        .topnav {background-color: #333;overflow: hidden;}
+        .topnav {background-color: #333;overflow: hidden; margin-bottom: 1%;}
         .topnav a {float: left;color: #f2f2f2;text-align: center;padding: 14px 16px;text-decoration: none;font-size: 17px;}
         .topnav a:hover {background-color: #ddd;color: rgb(59, 59, 59);}
         .topnav a.active {background-color: #7ab429;color: white;}
         .topnav a.right {Float:right;}
+        table 			      { 
+  margin-top: 5%;
+  border-spacing: 1; 
+  border-collapse: collapse; 
+  background:#333;
+  border-radius:6px;
+  border-color: #7ab429;
+  overflow:hidden;
+  max-width:800px; 
+  width:100%;
+  margin: auto;
+}
+td, th {
+  width: 4rem;
+  height: 2rem;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+th {
+  background: #333;
+  border-color: white;
+}
+
+
+	
       </style>
     <meta charset="utf-8" />
     <title>User-List</title>
@@ -20,8 +45,30 @@
         <a class='active' href="/userlist">List</a>
         <a class="right" href="/login">Login</a>
         <a class="right" href="/users">Register</a>
-        
          </div>
-     <p>{{users}}</p>
+
+     <table>
+       <tr>
+        <th>id</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Login</th>
+        <th>idRoli</th>
+        <th>Usuń</th>
+      </tr>
+    {{#each users}}
+    {{#unless isDeleted}}
+    <tr>
+        <th>{{id}}</th>
+        <th>{{FirstName}}</th>
+        <th>{{LastName}}</th>
+        <th>{{Login}}</th>
+        <th>{{idRoli}}</th>
+        <th><button>Usuń</button></th>
+      </tr>
+      {{/unless}}
+    {{/each}}
+
+     </table>
   </body>
 </html>

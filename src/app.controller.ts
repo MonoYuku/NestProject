@@ -7,7 +7,7 @@ export class AppController {
 
   @Render('index')
   root() {
-    return { message: 'elo byq'};
+    return { };
   }
 }
 
