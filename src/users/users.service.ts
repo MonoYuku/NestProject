@@ -6,7 +6,7 @@ import { users } from './users.entity';
 interface userDTO{
   FirstName: string;
   LastName: string;  
-  DateOfBirth: string;  
+  DateOfBirth: Date;  
   Login: string;
   Pass: string;
 }

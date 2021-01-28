@@ -5,6 +5,9 @@ import { AppService } from './app.service';
 import { UsersModule } from './users/users.module';
 import { Connection } from 'typeorm';
 import {users} from './users/users.entity';
+import { UserListController } from './user-list/user-list.controller';
+import { UserListService } from './user-list/user-list.service';
+import { UserListModule } from './user-list/user-list.module';
 
 
 
@@ -18,10 +21,10 @@ import {users} from './users/users.entity';
       database: 'project',
       entities: [users],
       synchronize: true,
-    }),UsersModule
+    }),UsersModule, UserListModule
   ], 
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [AppController, UserListController],
+  providers: [AppService, UserListService],
 })
 export class AppModule {
   constructor(private connection: Connection) {}

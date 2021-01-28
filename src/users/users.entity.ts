@@ -20,7 +20,7 @@ export class users {
   LastName: string;
   
   @Column()
-  DateOfBirth: string;
+  DateOfBirth: Date;
   
   @Column()
   Login: string;

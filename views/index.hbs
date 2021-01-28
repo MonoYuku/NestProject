@@ -4,12 +4,24 @@
       <style>
       body { margin: 20; background: #222; color: #fafafa; font-family: 'Arial Nova', sans-serif; }
       button { margin-left: 33%;margin-top: 25%; background-color: #7ab429; border: #fafafa;border-radius: 20%;color: #fafafa; height: 13%;width: 34%; text-align: center;text-decoration-color: #fafafa;display: inline-block;font-size: 1.2vw;}
+      .topnav {background-color: #333;overflow: hidden;}
+      .topnav a {float: left;color: #f2f2f2;text-align: center;padding: 14px 16px;text-decoration: none;font-size: 17px;}
+      .topnav a:hover {background-color: #ddd;color:  rgb(59, 59, 59);}
+      .topnav a.active {background-color: #7ab429;color: white;}
+      .topnav a.right {Float:right;}
       </style>
     <meta charset="utf-8" />
     <title>App</title>
   </head>
   <body>
-    <button onclick="location.href='./users'" type="button">
-         GO</button>
+    
+  <div class="topnav">
+  <a class="active" href="/">Home</a>
+  <a href="/userlist">List</a>
+  <a class="right" href="/login">Login</a>
+  <a class="right" href="/users">Register</a>
+  
+  </div>
+
   </body>
 </html>

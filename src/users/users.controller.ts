@@ -12,8 +12,7 @@ export class UsersController {
         return { };
   }
   @Post() 
-  createuser(@Body() body){
-    console.log(body);
+  create(@Body() body){
+    this.usersService.createuser(body);
     }
 }
-
