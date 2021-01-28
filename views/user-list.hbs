@@ -64,7 +64,8 @@ th {
         <th>{{LastName}}</th>
         <th>{{Login}}</th>
         <th>{{idRoli}}</th>
-        <th><button>Usuń</button></th>
+        <th><form action="/userlist" method="POST"> <button id={{id}}>Usuń</button></form></th>
+         
       </tr>
       {{/unless}}
     {{/each}}
