@@ -1,5 +1,6 @@
 import { allowedNodeEnvironmentFlags } from 'process';
-import { Entity, Column, PrimaryGeneratedColumn, Binary } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, Binary, InsertEvent, BeforeInsert } from 'typeorm';
+import * as bcrypt from 'bcrypt';
 
 export enum USER_ROLE  {
     Admin,
@@ -27,6 +28,9 @@ export class users {
 
   @Column()
   Pass: string;
+
+  
+  
 
   @Column({default: USER_ROLE.User})
   idRoli: number;

@@ -24,5 +24,9 @@ export class UserListService {
       async remove(id: string): Promise<void> {
         await this.userRepository.delete(id);
       }
+
+      async remove1(id:number): Promise<void>{
+        await this.userRepository.softDelete(id);
+      }
      
 }

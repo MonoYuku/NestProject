@@ -1,4 +1,4 @@
-import { Controller, Get, Render, Query, ParseIntPipe, Post, Redirect} from '@nestjs/common';
+import { Controller, Get, Render, Query, ParseIntPipe, Post, Redirect, Body, Param} from '@nestjs/common';
 import { UserListModule } from './user-list.module';
 import {UserListService} from './user-list.service'
 import {Pagination} from 'nestjs-typeorm-paginate'
@@ -19,8 +19,8 @@ export class UserListController {
       }
     @Post()
     @Redirect('/userlist')
-    delete(){
-      //const users =  this.userListService.remove('1');
+    delete(@Body() body){
+      const users =  this.userListService.remove(body.id);
     }
 
   

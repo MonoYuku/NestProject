@@ -20,30 +20,27 @@
   <div class="topnav">
   <a href="/">Home</a>
   <a href="/userlist">List</a>
-  <a href="/userupdate">Update</a>
+  <a class="active" href="/userupdate">Update</a>
   <a class="right" href="/login">Login</a>
-  <a class="right active" href="/users">Register</a>
+  <a class="right" href="/users">Register</a>
   
   
   </div>
-     <form action= "/users" method= "POST">
+     <form action= "/userupdate" method= "POST">
   <div>
-  <label for="FirstName">First name:</label><br>
-  <input type="text" name="FirstName" placeholder="John" required=''><br>
+  <label for="id">Id:</label><br>
+  <input type="number" name="id" placeholder="id" required=''><br>
   <div>
-  <label for="lastname">Last name:</label><br>
-  <input type="text" name="LastName" placeholder="Kovalsky" required=''><br>
+  <label for="lastname">First name:</label><br>
+  <input type="text" name="FirstName" placeholder="Change Name" required=''><br>
   <div>
-  <label for="Date">Date of birth:</label><br>
+  <label for="Date">Last name:</label><br>
+  <input type="text" name="LastName" placeholder="Change Surname" required=''><br>
+  <div>
+  <label for="login">Date of birth:</label><br>
   <input type="date" name="DateOfBirth" required=''><br>
   <div>
-  <label for="login">Login:</label><br>
-  <input type="text" name="Login" required=''><br>
-  <div>
-  <label for="password">Password:</label><br>
-  <input type="password" name="Pass" required=''><br>
-  <div>
-  <button>Add User</button>
+  <button>Update User</button>
 </form> 
   </body>
 </html>

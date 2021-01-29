@@ -10,6 +10,9 @@ import { UserListService } from './user-list/user-list.service';
 import { UserListModule } from './user-list/user-list.module';
 import { UsersController } from './users/users.controller';
 import { UsersService } from './users/users.service';
+import { UserupdateController } from './userupdate/userupdate.controller';
+import { UserupdateService } from './userupdate/userupdate.service';
+import { UserupdateModule } from './userupdate/userupdate.module';
 
 
 
@@ -23,7 +26,7 @@ import { UsersService } from './users/users.service';
       database: 'project',
       entities: [users],
       synchronize: true,
-    }),UsersModule, UserListModule
+    }),UsersModule, UserListModule, UserupdateModule
   ], 
   controllers: [AppController],
   providers: [AppService],

@@ -1,7 +1,9 @@
 import { Injectable } from '@nestjs/common';
-import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
+import { InjectRepository} from '@nestjs/typeorm';
+import { Repository, InsertEvent} from 'typeorm';
 import { users } from './users.entity';
+import * as bcrypt from 'bcrypt';
+import { Observable } from 'rxjs';
 
 interface userDTO{
   FirstName: string;
@@ -29,6 +31,11 @@ export class UsersService {
   async remove(id: string): Promise<void> {
     await this.usersRepository.delete(id);
   }
+
+  // hashpassword(Pass: string): Observable <string> {
+  //   return from<string>(bcrypt.hash(Pass, 12));
+  // }
+  
   createuser(data: userDTO) {
       return this.usersRepository.save(data);
   }
