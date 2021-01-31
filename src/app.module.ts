@@ -13,6 +13,9 @@ import { UsersService } from './users/users.service';
 import { UserupdateController } from './userupdate/userupdate.controller';
 import { UserupdateService } from './userupdate/userupdate.service';
 import { UserupdateModule } from './userupdate/userupdate.module';
+import { UserloginController } from './userlogin/userlogin.controller';
+import { UserloginService } from './userlogin/userlogin.service';
+import { UserloginModule } from './userlogin/userlogin.module';
 
 
 
@@ -26,7 +29,7 @@ import { UserupdateModule } from './userupdate/userupdate.module';
       database: 'project',
       entities: [users],
       synchronize: true,
-    }),UsersModule, UserListModule, UserupdateModule
+    }),UsersModule, UserListModule, UserupdateModule, UserloginModule
   ], 
   controllers: [AppController],
   providers: [AppService],

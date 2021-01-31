@@ -20,27 +20,21 @@
   <div class="topnav">
   <a href="/">Home</a>
   <a href="/userlist">List</a>
-  <a class="active" href="/userupdate">Update</a>
-  <a class="right" href="/login">Login</a>
+  <a  href="/userupdate">Update</a>
+  <a class="right active" href="/login">Login</a>
   <a class="right" href="/users">Register</a>
   
   
   </div>
-     <form action= "/userupdate" method= "POST">
+     <form action= "/login" method= "POST">
   <div>
-  <label for="id">Id:</label><br>
-  <input type="number" name="id" placeholder="id" required=''><br>
+  <label for="Login">Login:</label><br>
+  <input type="text" name="Login" placeholder="Login" required=''><br>
   <div>
-  <label for="lastname">First name:</label><br>
-  <input type="text" name="FirstName" placeholder="Change Name"><br>
+  <label for="Pass">Password:</label><br>
+  <input type="password" name="Pass" placeholder="Password" required=''><br>
   <div>
-  <label for="Date">Last name:</label><br>
-  <input type="text" name="LastName" placeholder="Change Surname"><br>
-  <div>
-  <label for="login">Date of birth:</label><br>
-  <input type="date" name="DateOfBirth"><br>
-  <div>
-  <button>Update User</button>
+  <button>Login</button>
 </form> 
   </body>
 </html>

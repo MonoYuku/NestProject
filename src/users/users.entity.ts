@@ -1,5 +1,5 @@
 import { allowedNodeEnvironmentFlags } from 'process';
-import { Entity, Column, PrimaryGeneratedColumn, Binary, InsertEvent, BeforeInsert } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, Binary, InsertEvent, BeforeInsert, Unique } from 'typeorm';
 import * as bcrypt from 'bcrypt';
 
 export enum USER_ROLE  {
@@ -9,6 +9,7 @@ export enum USER_ROLE  {
 }
 
 @Entity()
+@Unique(["Pass"])
 export class users {
     
     @PrimaryGeneratedColumn()
@@ -23,11 +24,13 @@ export class users {
   @Column()
   DateOfBirth: Date;
   
-  @Column()
+  @Column(Unique)
   Login: string;
 
   @Column()
   Pass: string;
+  
+  
 
   
   

@@ -16,12 +16,12 @@ export class UserListService {
         return this.userRepository.find();
       }
     
-      findOne(id: string): Promise<users> {
+      findOne(id: number): Promise<users> {
         return this.userRepository.findOne(id);
       }
     
     
-      async remove(id: string): Promise<void> {
+      async remove(id: number): Promise<void> {
         await this.userRepository.delete(id);
       }
 
